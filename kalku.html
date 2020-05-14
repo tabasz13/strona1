@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Szimi</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+
+ 
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+ 
+  <link href="css/style.css" rel="stylesheet">
+
+ 
+</head>
+
+<body>
+
+  
+  <div class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <a class="navbar-brand" href="index.html">Dragon Ball</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Kalkulator</a></li>
+        </ul>
+      </div>
+     
+    </div>
+  </div>
+
+
+ 
+
+  <div class="container pt">
+    <div class="row mt">
+      <div class="col-lg-6 col-lg-offset-3 centered">
+        <h3>CONTACT ME</h3>
+        <style type="text/css">
+#calculator {
+    background: #eaeaea;
+    margin: 0 auto;
+    padding: 35px 25px 35px 25px;
+    width: 200px;
+    text-align: center;
+}
+#calculator button {
+    padding: 10px;
+    width: 40px;
+}
+#calculator input[type="text"] {
+    padding: 10px;
+    width: 147px;
+    margin-bottom: 5px;
+}
+</style>
+<script>
+function Calculator(operator) 
+{
+    var a = document.getElementById('a').value;
+    var b = document.getElementById('b').value;  
+ 
+    switch(operator) 
+    {
+        case '+':
+            var result = parseFloat(a) + parseFloat(b);         
+        break;
+        case '-':
+            var result = parseFloat(a) - parseFloat(b);         
+        break;  
+        case 'x':
+            var result = parseFloat(a) * parseFloat(b);         
+        break;  
+        case '/':
+            var result = parseFloat(a) / parseFloat(b);         
+        break;    
+    }
+ 
+    document.getElementById('result').value = '= ' + result;
+}
+</script>
+
+
+<form id="calculator">
+    <input type="text" id="a" placeholder="a" />
+    <input type="text" id="b" placeholder="b" />
+    <input type="text" id="result" placeholder="=" disabled="disabled" />
+    <button type="button" onclick="Calculator(this.innerHTML)">+</button> 
+    <button type="button" onclick="Calculator(this.innerHTML)">-</button>
+    <button type="button" onclick="Calculator(this.innerHTML)">x</button>   
+    <button type="button" onclick="Calculator(this.innerHTML)">/</button>
+</form>
+
+
+
+
+ <div id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <h4>kontakt</h4>
+          <p>
+            18928@student.pwsz.elblag.pl<br/>
+          </p>
+        </div>
+     
+
+      
+
+        <div class="col-lg-4">
+          <h4>o mnie</h4>
+          <p>Szymon Szarzyński 18928 gr4</p>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+
+ 
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/php-mail-form/validate.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+
+  
+  <script src="js/main.js"></script>
+
+</body>
+</html>
